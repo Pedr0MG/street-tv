@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreetTV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CENA: beco grafitado + TV sobre o fardo de garrafas -->
+<div id="cena">
+  <div id="mundo">
+    <div id="palco">
+      <img id="foto-cena" src="img/cena.png" alt="Beco com grafites, boombox, skates e pizza" draggable="false">
+      <button id="tv-cena" type="button" aria-label="Ligar a StreetTV">
+        <span class="vidro-apagado"></span>
+        <img src="img/tv.png" alt="" draggable="false">
+      </button>
+    </div>
+  </div>
+  <button id="link-sobre" type="button">Sobre</button>
+  <p id="dica-cena">clique na TV</p>
+</div>
+
+<!-- MODO TV -->
+<div id="modo-tv" hidden>
+  <div id="tv-frame">
+    <div id="tela">
+      <div id="camada-video"><div id="yt-player"></div></div>
+      <div id="bloqueio-video"></div>
+      <div id="sem-sinal" hidden>
+        <canvas id="estatica-fixa"></canvas>
+        <img id="logo-stv" src="img/logo-stv.jpg" alt="STV">
+        <div id="sem-sinal-texto"><strong id="sem-sinal-titulo">SEM SINAL</strong><span id="sem-sinal-num"></span></div>
+      </div>
+      <canvas id="estatica"></canvas>
+      <div id="overlay-crt"></div>
+      <div id="osd"></div>
+      <div id="card" aria-live="polite"><span id="card-num"></span><div><b id="card-titulo"></b><small id="card-autor"></small></div></div>
+      <div id="guia" hidden>
+        <h2>GUIA DE CANAIS</h2>
+        <ol id="guia-lista"></ol>
+        <p class="guia-dica">CH+ / CH− navegar · 0-9 pular · S confirmar · MENU sair</p>
+      </div>
+      <div id="sobre" hidden>
+        <section id="sobre-texto">
+          <h2>SOBRE A STREETTV</h2>
+          <p><em>TEXTO PROVISÓRIO: edite este bloco em index.html (section#sobre-texto).</em></p>
+          <p>A StreetTV é uma televisão que só passa cultura de rua: rap, funk, entrevistas, batalhas, graffiti e pixo. A ideia é manter vivo o legado das artes periféricas e dar visibilidade a mídias que podem ser inéditas para muita gente.</p>
+          <p>Cada canal é uma obra. Mude de canal no controle e descubra.</p>
+        </section>
+      </div>
+      <div id="desligada"></div>
+    </div>
+    <img id="tv-moldura" src="img/tv.png" alt="" draggable="false">
+  </div>
+  <button id="voltar" type="button">&larr; voltar</button>
+</div>
+
+<!-- CONTROLE REMOTO -->
+<div id="controle" hidden>
+  <div id="controle-corpo">
+    <img src="img/controle.png" alt="Controle remoto" draggable="false">
+  </div>
+</div>
+
+<div id="aviso-rotacao"><p>Gire o aparelho para ver a StreetTV</p></div>
+
+<script src="canais.js"></script>
+<script src="logic.js"></script>
+<script src="fx.js"></script>
+<script src="player.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
