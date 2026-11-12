@@ -37,7 +37,8 @@ img{-webkit-user-drag:none;user-select:none}
 #tv-moldura{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
 #tela{position:absolute;left:7.6%;top:10.2%;width:66.2%;height:72.2%;overflow:hidden;background:#000;border-radius:7% / 9%;z-index:1;container-type:size}
 #camada-video{position:absolute;left:50%;top:50%;height:100%;aspect-ratio:16/9;transform:translate(-50%,-50%);background:#000}
-#camada-video.vertical{height:237%}
+/* video vertical (Shorts): a largura do video cobre a tela e o enquadramento mostra a faixa de ~13% a ~55% da altura (rostos) */
+#camada-video.vertical{height:237%;top:-30.6%;transform:translateX(-50%)}
 #camada-video iframe,#yt-player{position:absolute;inset:0;width:100%;height:100%;border:0}
 #bloqueio-video{position:absolute;inset:0;z-index:2}
 #overlay-crt{position:absolute;inset:0;z-index:6;pointer-events:none;
@@ -115,3 +116,4 @@ img{-webkit-user-drag:none;user-select:none}
 
 /* depuracao dos botoes do controle: abrir index.html?debug */
 #controle.debug .bt{outline:1px solid rgba(255,0,0,.8);background:rgba(255,0,0,.12)}
+#sobre-texto .sobre-fim{color:#ffcc33;letter-spacing:.12em;margin-top:1.4em}
